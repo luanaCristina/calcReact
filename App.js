@@ -19,6 +19,30 @@ export default class App extends Component {
         <Text style={styles.value}>
           {parseFloat(this.state.currentValue).toLocaleString()}
         </Text>
+
+        //component Row
+        <Row>
+          <Button
+            text="C"
+            theme="secondary"
+            onPress={()=> this.HandleTap("clear")}
+          />
+          <Button
+            text="+/-"
+            theme="secondary"
+            onPress={()=> this.HandleTap("posneg")}
+          />
+          <Button
+            text="%"
+            theme="secondary"
+            onPress={()=> this.HandleTap("porcentage")}
+          />
+          <Button
+            text="/"
+            theme="secondary"
+            onPress={()=> this.HandleTap("operator", "/")}
+          />
+        </Row>
         </SafeAreaView> 
       </View>
     )
