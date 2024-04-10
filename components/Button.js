@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, Dimensions, TouchableOpacity } from 'react-native';
 
 export default ({ onPress, text, size, theme}) => {
     const buttonStyles = [styles.button];
@@ -19,9 +19,8 @@ export default ({ onPress, text, size, theme}) => {
         <TouchableOpacity onPress={onPress} style={buttonStyles}>
             <Text style={textStyles}>{text}</Text>
         </TouchableOpacity>
-    )
-
-}
+    );
+};
 
 //definindo as dimensões
 const screen = Dimensions.get("window");
@@ -39,7 +38,7 @@ const styles = StyleSheet.create({
     },
     text:{
         color: "#fff",
-        fontsize: 24,
+        fontSize: 24,
     },
     textSecondary:{
         color: "#060606",
